@@ -1,0 +1,29 @@
+on-arrival: {!
+// set up the infrastructure
+Q.samindang_formed = 1;
+Q.parties.push('samindang');
+
+Q.workers_samindang = 6;
+Q.workers_spd -= 3;
+Q.new_middle_samindang = 6;
+Q.old_middle_samindang = 1;
+Q.rural_samindang = 1;
+Q.unemployed_samindang = 2;
+Q.catholics_samindang = 1;
+
+Q.workers_other -= 2;
+
+if (Q.unions_independent) {
+    Q.workers_samindang += 8;
+}
+
+// update all records
+Q.samindang_r = 0;
+Q.old_samindang_r = 0;
+for (var record of Q.election_records) {
+    record['samindang'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['samindang'] = 0;
+}
+!}
