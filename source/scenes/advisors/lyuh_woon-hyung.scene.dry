@@ -1,23 +1,23 @@
-title: Siegfried Aufhäuser
+title: Lyuh Woon-hyung
 is-pinned-card: true
-tags: advisor, reformist
+tags: advisor, former
 card-image: img/portraits/AufhäuserSiegfried.jpg
-view-if: aufhauser_advisor = 1
+view-if: lyuh_woon-hyung_advisor = 1
 new-page: true 
 
-= Siegfried Aufhäuser
+= Lyuh Woon-hyung
 
-Aufhäuser is a leader of the AfA-Bund, the federation of socialist white-collar trade unions.
+Lyuh is a leader of the Geonguk Dongmaeng, an underground anti-Japanese organisation on the eve of the liberation of the Korean Peninsula.
 
-- @white_collar
+- @publicity
 - @union_unity
 - @crisis
 - @moderate_economic_plan
 - @root: Return to main
 
-@white_collar
-title: Organizing white-collar workers
-subtitle: Improve our standing among the new middle class.
+@publicity
+title: Publicity
+subtitle: Improve our standing among the volks.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
 on-arrival: advisor_action_timer = 6; new_middle_spd += 6*(1-dissent);
