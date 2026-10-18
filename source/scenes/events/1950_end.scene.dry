@@ -1,15 +1,15 @@
-title: A New Day in Germany
+title: A New Day in Korea
 subtitle: Has democracy finally triumphed?
 tags: event
 priority: 3
-view-if: hindenburg_dead = 1 and president != "Hitler" and president != "Göring" and president != "Seldte"
+view-if: hindenburg_dead = 1 and president != "Syngman_Rhee" and president != "Kim_Seong-su" and president != "Kim_Koo"
 max-visits: 1
 on-arrival: {!
 !}
 new-page: true
-go-to: game_over_1934
+go-to: game_over_1950
 
-= A New Day in Germany
+= A New Day in Korea
 
 After the death of Hindenburg and the presidential election of 1934, it seems as if an era of history is closing. The worst years of political and economic crisis are over, and Nazism's days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
 
