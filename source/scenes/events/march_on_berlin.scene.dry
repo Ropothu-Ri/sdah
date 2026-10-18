@@ -1,17 +1,17 @@
-title: March on Berlin
+title: March on Seoul
 subtitle: Right-wing militants are taking action...
-view-if: ((spd_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and nsdap_normalized + dnvp_normalized >= 0.5)) and march_on_berlin_timer = 0
+view-if: ((spd_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and nsdap_normalized + dnvp_normalized >= 0.5)) and march_on_Seoul_timer = 0
 new-page: true
 max-visits: 4
-on-arrival: march_on_berlin_seen += 1; sa_strength += 80; sh_strength += 80; strife += 1; march_on_berlin_timer += 8
+on-arrival: march_on_seoul_seen += 1; sa_strength += 80; sh_strength += 80; strife += 1; march_on_seoul_timer += 8
 go-to: ask_resign if spd_in_government and president != "Braun"; govt_menu if president = "Braun"; non_govt_menu if spd_in_government = 0 and president != "Braun"
 tags: event
 
-= March on Berlin
+= March on Seoul
 
-The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently overthrow the government.
+The far right is mobilizing. Paramilitary forces of the Northwest Youth League and White Shirts Society, organized under the Dokchok Gungminhoe, have marched on Seoul, threatening to violently overthrow the government.
 
-They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Adolf Hitler as chancellor[? if hitler_deported : , and the revocation of his deportation ?]. It is obvious that they are threatening a civil war if their demands are not met.
+They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Syngman Rhee as president[? if hitler_deported : , and the revocation of his deportation ?]. It is obvious that they are threatening a civil war if their demands are not met.
 
 @non_govt_menu
 
@@ -58,9 +58,9 @@ President [+ president +] has asked our government to resign.
 @fight
 title: Deploy the Reichsbanner and call a general strike to resist the fascists!
 on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and spd_in_government
-go-to: fight_2_win if defense_strength >= enemy_strength and march_on_berlin_seen <= 1; fight_2_win_2 if defense_strength >= enemy_strength and march_on_berlin_seen > 1; fight_2_pre_civil_war if defense_strength < enemy_strength
+go-to: fight_2_win if defense_strength >= enemy_strength and march_on_seoul_seen <= 1; fight_2_win_2 if defense_strength >= enemy_strength and march_on_Seoul_seen > 1; fight_2_pre_civil_war if defense_strength < enemy_strength
 
-The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the fascist demonstration.
+The Reichsbanner number at [+ rb_strength +] thousand; many are in Seoul to counter the fascist demonstration.
 
 [? if spd_prussia: The Prussian police has been deployed against the fascists. ?] [? if spd_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
 
@@ -76,7 +76,7 @@ The show of force has reinvigorated support for the republic and for the SPD, an
 @fight_2_win_2
 on-arrival: coup_progress = 0; pro_republic += 5; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); rb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
 
-# if march on Berlin has already been seen
+# if march on Seoul has already been seen
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
 
@@ -85,7 +85,7 @@ The show of force has reinvigorated support for the republic and for the SPD, an
 
 @fight_2_pre_civil_war
 
-Our forces confront the fascists on the streets of Berlin, and armed fighting erupts. Neither side is dislodged from their positions.
+Our forces confront the fascists on the streets of Seoul, and armed fighting erupts. Neither side is dislodged from their positions.
 
 - @civil_war: It is a civil war.
 
