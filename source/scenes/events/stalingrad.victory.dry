@@ -1,1 +1,13 @@
-The Battle of Stalingrad
+title: German Retreat
+subtitle: USSR gains victory of the Battle of Stalingrad
+new-page: true
+view-if: year = 1943 and month = 2
+max-visits: 1
+tags: event
+face-image: img/Hindenburg_head.jpg
+
+= German Retreat
+
+The last group of starving and freezing German soldiers surrendered to the Soviet army, and the Battle of Stalingrad ended in a Soviet victory.
+
+The Axis powers’ aggressive momentum had been reversed, and it seemed that victory in the anti-fascist war would also come in the near future. Hope Korea will likewise gain liberation in the not-too-distant future.
