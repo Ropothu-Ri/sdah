@@ -2,11 +2,11 @@ title: Election Simulation
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
-- @1930: 1930 historical scenario
-- @1932: 1932 (July) historical scenario
+- @1946: 1946 historical scenario
+- @194805: 1948 (May) historical scenario
+- @194808: 1948 (August) historical scenario
 
-@1928
+@1946
 on-arrival: {!
 Q.workers = 46; // industry and trade
 Q.old_middle = 13; // "old mittelstand"
@@ -79,7 +79,7 @@ Q.catholics_other = 10;
 go-to: election_algorithm
 set-jump: post_election
 
-@1930
+@194805
 on-arrival: {!
 Q.workers = 46; // industry and trade
 Q.old_middle = 13; // "old mittelstand"
@@ -161,7 +161,7 @@ Q.other_r = 5;
 go-to: election_algorithm
 set-jump: post_election
 
-@1932
+@194808
 on-arrival: {!
 Q.workers = 46; // industry and trade
 Q.old_middle = 13; // "old mittelstand"
@@ -277,28 +277,28 @@ The electoral system is essentially proportional, with the proportion of Reichst
  
 **Election results:**
 
-# 1928: 30, 1930: 25, 1932: 22
+# 1946: 30, 194805: 25, 194808: 22
 SPD: [+ spd_r +]
 
-# 1928: 15, 1930: 15, 1932: 
+# 1946: 15, 194805: 15, 194808: 
 Z + BVP: [+ z_r +]
 
-# 1928: 10, 1930: 13
+# 1946: 10, 194805: 13
 KPD: [+ kpd_r +]
 
-# 1928: 5, 1930: 4 (as DstP)
+# 1946: 5, 194805: 4 (as DstP)
 DDP: [+ ddp_r +]
 
-# 1928: 9, 1930: 5
+# 1946: 9, 194805: 5
 DVP: [+ dvp_r +]
 
-# 1928: 14, 1930: 7
+# 1946: 14, 194805: 7
 DNVP: [+ dnvp_r +]
 
-# 1928: 3, 1930: 18
+# 1946: 3, 194805: 18
 NSDAP: [+ nsdap_r +]
 
-# 1928: 9, 1930: 10
+# 1946: 9, 194805: 10
 Other: [+ other_r +]
 
 **Potential coalitions:**
